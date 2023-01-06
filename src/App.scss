@@ -8,7 +8,7 @@
   margin-right: auto;
   margin-left: auto;
   padding: 1rem;
-  background-color: $theme-ligth-gray;
+  background-color: $theme-ligth-gray; 
 }
 
  
@@ -22,12 +22,7 @@
   margin-left: 18px;
   display: flex;
 }
-
-.sale-card-instance-1 {
-  height: 100%;
-  flex-basis: 35%;
-}
-
+ 
 .flex-container-1 {
   height: 60%;
   flex-direction: column;
