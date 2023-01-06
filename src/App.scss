@@ -1,0 +1,57 @@
+@import './styles/mixins';
+
+.App {
+  background-color: $theme-ligth-gray; 
+}
+.container {
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
+  background-color: $theme-ligth-gray;
+}
+
+ 
+
+.flex-container {
+  width: 95%;
+  flex-direction: row;
+  flex-basis: 22%;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-left: 18px;
+  display: flex;
+}
+
+.sale-card-instance-1 {
+  height: 100%;
+  flex-basis: 35%;
+}
+
+.flex-container-1 {
+  height: 60%;
+  flex-direction: column;
+  flex-basis: 62%;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 1px;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.radio-select-instance-1 {
+  width: 100%;
+  flex-basis: 49%;
+}
+
+.filter-button-instance-1 {
+  width: 35%;
+  flex-basis: 41%;
+  margin-left: 17px;
+}
+
+.sales-table-instance-1 {
+  width: 95%;
+  flex-basis: 50%;
+  margin-left: 18px;
+}
