@@ -1,4 +1,5 @@
 @import '../styles/mixins';
+
 .nav { 
   font-family: Inter, Arial;
   font-size: 1rem;  
@@ -25,11 +26,12 @@
 }
 
 .navigation-menu ul {
-  display: flex;
   padding: 0;
+  display: flex;
 }
 
-.navigation-menu li {
+ 
+.navigation-menu li { 
   list-style-type: none;
   margin: 0 1rem;
 }
@@ -38,13 +40,22 @@
   color: $theme-ligth-gray;
   text-decoration: none;
   display: block;
-  width: 100%;
+  width: 100%;  
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 } 
  
 .icon-menu{ 
   color:$theme-ligth-gray;
 }
  
+.icon-help{
+  height: 16px; 
+  object-fit: cover; 
+  margin-left: 8px; 
+}
 .hamburger {
   border: 0;
   height: 40px;
@@ -91,6 +102,8 @@
     color: $theme-blue;
     width: 100%;
     padding: 1.5rem 0;
+    display: flex;
+    flex-direction: row;
   }
 
   .navigation-menu li:hover {

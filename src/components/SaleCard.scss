@@ -8,10 +8,11 @@
   font-size: 3rem;
   font-weight: 700; 
   padding-bottom: 16px; 
-  border-radius: 16px; 
+  border-radius: $border-radius; 
   background-color: #fff;  
   align-items: center;
   min-width: 300px;
+  box-shadow: $shadow-sm;
 }
 
 .card-header {
@@ -19,10 +20,11 @@
   font-weight: 600; 
   background: $secondary_gradient;
   color: $theme-ligth-gray;
-  border-radius: 16px 16px 0 0;
+  border-radius: $border-radius $border-radius 0 0;
   display: flex;
   flex-direction: row;  
   align-items: left; 
+  justify-content: space-between; 
   font-size: 0.85rem;
   line-height: 29px;
 }
@@ -31,9 +33,9 @@
 } 
 
 .icon-info {
-  width: 28px;
-  height: 28px;
-  object-fit: cover;
+  height: 16px; 
+  object-fit: cover; 
+  margin: 16px;
 }
 
  

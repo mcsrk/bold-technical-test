@@ -5,6 +5,7 @@ import "./Nav.scss";
 
 // Assets
 import boldLogo from "../assets/boldLogo.png";
+import iconHelp from "../assets/iconHelp.svg";
 import { Bars3BottomRightIcon } from "@heroicons/react/20/solid";
 
 const Nav = () => {
@@ -33,7 +34,10 @@ const Nav = () => {
             <a href="https://bold.co/comparar.html">Mi negocio</a>
           </li>
           <li>
-            <a href="https://bold.co/contacto.html">Ayuda</a>
+            <a href="https://bold.co/contacto.html">
+              <span>Ayuda</span>
+              <img className="icon-help" src={iconHelp} alt="help-icon" />
+            </a>
           </li>
         </ul>
       </div>
