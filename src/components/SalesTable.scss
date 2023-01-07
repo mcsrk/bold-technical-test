@@ -1,0 +1,50 @@
+@import '../styles/mixins';
+
+.payments-table {
+  border-collapse: collapse;
+  margin: 0 0 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.payments-table thead tr {
+  background-color: white;
+  color: $theme-blue;
+  text-align: left; 
+  border-radius: 40px;
+}
+.payments-table th,
+.payments-table td {
+    padding: 12px 15px;
+}
+.payments-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  background-color: white;
+}
+
+.payments-table tbody tr:first-of-type {
+  border-top: 1px solid #dddddd; 
+}
+.payments-table tbody tr:last-of-type {
+  border-bottom: 2px solid $theme-gray; 
+}
+
+.sales-table {
+  color: #969696;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  font-family: Inter, Arial;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 27px;
+  display: flex;
+}
+
+.table-name-instance-1 {
+  width: 100%;
+  flex-basis: 11%;
+  margin-bottom: -2px;
+  margin-right: 5px;
+}

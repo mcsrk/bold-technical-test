@@ -1,0 +1,77 @@
+@import '../styles/mixins';
+
+
+.custom-row {
+  color: #969696;
+  align-items: center; 
+  font-family: Inter, Arial;
+  font-size: 0.9rem; 
+  border-radius: 16px;
+}
+
+.row-box {
+  height: 90%;
+  background-color: #fff;
+  border: 1px solid #d8d8d8;
+  flex-direction: row;
+  flex-basis: 100%;
+  justify-content: space-around;
+  align-items: stretch;
+  padding-right: 80px;
+  display: flex;
+}
+
+td{
+  vertical-align: text-top;
+}
+ 
+
+.icon-calculator {
+  width: 12px; 
+  object-fit: cover; 
+  margin-right: 8px; 
+}
+
+.pay-state {
+  color: #111e6c; 
+  font-size: 1rem; 
+}
+.pay-cell{
+  border-left: 6px solid $theme-gray;
+}
+.accepted{
+  border-left: 6px solid $theme-blue;
+}
+.failed{
+  border-left: 6px solid $theme-red;
+}
+.pending{
+  border-left: 6px solid $theme-gray;
+}
+.logo-pay-method {
+  width: 24px; 
+  margin-right: 8px;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover; 
+}
+ 
+.amount-container { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;   
+}
+
+.pay-amount {
+  color: #111e6c; 
+  line-height: 23px;
+}
+.pay-deduction{
+  font-size: 0.75rem;  
+}
+.pay-fee {
+  color: #ef434e;
+  font-size: 0.75rem;  
+  line-height: 16px;
+}

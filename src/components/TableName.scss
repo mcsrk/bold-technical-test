@@ -1,0 +1,18 @@
+@import '../styles/mixins';
+
+.table-name {
+  color: #fff;
+  flex-direction: row;
+  justify-content: flex-start; 
+  font-family: Inter, Arial;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 32px; 
+  background: $primary-gradient;
+  border-radius: $border-radius $border-radius 0 0;
+  padding: 4px 0;
+} 
+
+.table-name-text {
+  margin-left: 20px;
+}
