@@ -5,10 +5,11 @@ import "./Nav.scss";
 
 // Assets
 import boldLogo from "../assets/boldLogo.png";
-import iconHelp from "../assets/iconHelp.svg";
 import { Bars3BottomRightIcon } from "@heroicons/react/20/solid";
 
-const Nav = () => {
+// Consts
+
+const Nav = ({ items }) => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
@@ -30,15 +31,13 @@ const Nav = () => {
         }
       >
         <ul>
-          <li>
-            <a href="https://bold.co/comparar.html">Mi negocio</a>
-          </li>
-          <li>
-            <a href="https://bold.co/contacto.html">
-              <span>Ayuda</span>
-              <img className="icon-help" src={iconHelp} alt="help-icon" />
-            </a>
-          </li>
+          {items.map((item) => (
+            <li>
+              <a href={item.link}>
+                {item.title} {item?.icon}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

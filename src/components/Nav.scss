@@ -9,7 +9,7 @@
   height: 60px;
   width: 100%;
   padding: 0.5rem 0rem; 
-  background: $primary_gradient;
+  background: $primary-gradient;
 }
   
 .bold-logo { 
@@ -17,7 +17,7 @@
   object-fit: cover;
   background-position: center;
   background-size: cover;
-  margin-left: 36px;
+  margin-left: 18px;
 }
 
 .navigation-menu {
@@ -51,7 +51,7 @@
   color:$theme-ligth-gray;
 }
  
-.icon-help{
+.icon-tab{
   height: 16px; 
   object-fit: cover; 
   margin-left: 8px; 
