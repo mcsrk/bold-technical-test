@@ -6,7 +6,7 @@
   background-color: white; 
 
   border-radius: $border-radius;
-  border: none;
+  border: 1px solid white;
   
   font-weight: 400;
   line-height: 27px;
@@ -20,6 +20,10 @@
   cursor: pointer;
   align-items: center; 
 }  
+
+.filter-button:hover {
+  border: 1px solid $theme-gray; 
+}
 
 .icon-filter {
   height: 16px; 
