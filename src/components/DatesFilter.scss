@@ -1,0 +1,38 @@
+@import '../styles/mixins';
+ 
+ .btn-group {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 8px 2px; 
+}
+
+.button-text {
+  margin-top: 1px;
+}
+ 
+.btn-group button{
+  color: #111e6c; 
+  background-color: white; 
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-size: 0.85rem; 
+  padding: 8px 16px;
+  width: 100%;
+  margin: 0 8px;
+}
+.btn-group button:hover {
+  background-color: #e5e7ed;
+}
+
+.btn-group  .active {
+  color: #111e6c; 
+  background-color: #e5e7ed;
+  font-weight: 700; 
+} 
+
