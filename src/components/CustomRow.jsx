@@ -34,7 +34,7 @@ const CustomRow = ({ item }) => {
 
   return (
     <tr className={`custom-row`}>
-      <td className={`pay-cell ${payStatus || "pending"}`}>
+      <td className={`pay-status ${payStatus || "pending"}`}>
         <img
           className="icon-calculator"
           src={iconCalculator}
