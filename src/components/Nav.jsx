@@ -32,7 +32,7 @@ const Nav = ({ items }) => {
       >
         <ul>
           {items.map((item) => (
-            <li>
+            <li key={item.id}>
               <a href={item.link}>
                 {item.title} {item?.icon}
               </a>
