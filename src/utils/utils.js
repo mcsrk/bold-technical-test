@@ -55,6 +55,5 @@ export const parseIsoDate = (isoDate) => {
  * @returns
  */
 export const sortObjsByDate = (arr, field) => {
-  console.log(typeof arr, arr);
   return arr.sort((arr, b) => arr[field].localeCompare(b.fecha));
 };

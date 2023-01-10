@@ -1,4 +1,5 @@
-import * as React from "react";
+import React from "react";
+
 // Styles
 import "./App.scss";
 // Assets
@@ -10,12 +11,13 @@ import Filter from "./components/Filter";
 import SaleCard from "./components/SaleCard";
 import SalesTable from "./components/SalesTable";
 import Nav from "./components/Nav";
-import RadioSelect from "./components/RadioSelect";
+import DatesFilter from "./components/DatesFilter";
 
 // Consts
 const navItems = [
-  { title: "Mi negocio", link: "https://bold.co/comparar.html" },
+  { id: 10, title: "Mi negocio", link: "https://bold.co/comparar.html" },
   {
+    id: 11,
     title: "Ayuda",
     link: "https://bold.co/contacto.html",
     icon: <img className="icon-tab" src={iconHelp} alt="help-icon" />,
@@ -23,7 +25,7 @@ const navItems = [
 ];
 const cardData = {
   amount: 2460000,
-  title: "Total de ventas de hoy",
+  title: "Total de ventas de septiembre",
   date: "Septiembre, 2020",
 };
 const paymentsData = {
@@ -55,7 +57,7 @@ const paymentsData = {
       payMethod: "master",
     },
     {
-      payId: "ZZZZ23784UBV2",
+      payId: "HGGG2374H4HFV2",
       payDate: "2023-01-02T03:44:51+0000",
       payAmount: 25000,
       payCard: "2021 7711 2021 7711",
@@ -63,21 +65,33 @@ const paymentsData = {
       payStatus: "failed",
       payMethod: "none",
     },
+    {
+      payId: "GAGH2378AFHAHFBV2",
+      payDate: "2022-09-02T03:44:51+0000",
+      payAmount: 50000,
+      payCard: "2021 7711 2021 7711",
+      payFee: -1500,
+      payStatus: "accepted",
+      payMethod: "visa",
+    },
+    {
+      payId: "4FH4FHJ84UBV2",
+      payDate: "2022-09-24T03:44:51+0000",
+      payAmount: 25000,
+      payCard: "2021 7711 2021 7711",
+      payFee: -1500,
+      payStatus: "pending",
+      payMethod: "master",
+    },
   ],
 };
-const App = () => {
-  const propsData = {
-    radioSelect: {
-      button3: "Septiembre",
-      buttonText: "Esta semana",
-      buttonText: "Hoy",
-    },
-    filterButton: {
-      text: "FILTRAR",
-      iconFilter: iconFilter,
-    },
-  };
+const dateFilters = [
+  { key: 3, value: "today", name: "Hoy" },
+  { key: 2, value: "current-week", name: "Esta semana" },
+  { key: 1, value: "septiembre", name: "Septiembre" },
+];
 
+const App = () => {
   return (
     <div className="App">
       <Nav items={navItems} />
@@ -86,11 +100,8 @@ const App = () => {
         <div className="flex-container">
           <SaleCard data={cardData} />
           <div className="flex-container-1">
-            <RadioSelect
-              className="radio-select-instance-1"
-              {...propsData.radioSelect}
-            />
-            <Filter {...propsData.filterButton} />
+            <DatesFilter items={dateFilters} />
+            <Filter />
           </div>
         </div>
         <SalesTable data={paymentsData} />
