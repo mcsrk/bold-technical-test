@@ -3,8 +3,7 @@
 .sale-card { 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
-  font-family: Inter, Arial;
+  justify-content: flex-start;  
   font-size: 3rem;
   font-weight: 700; 
   padding-bottom: 16px; 
@@ -13,6 +12,7 @@
   align-items: center;
   min-width: 300px;
   box-shadow: $shadow-sm;
+  flex-basis: 25%;
 }
 
 .card-header {
@@ -47,6 +47,9 @@
   margin-top: 5px;
   line-height: 53px;
   font-size: 1.7rem;
+  font-weight: 900;
+  font-family: "Montserrat-Bold", "Montserrat"  , Inter, Arial;
+
 }
 
 .date {

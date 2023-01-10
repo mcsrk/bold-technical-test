@@ -1,7 +1,25 @@
 @import './styles/mixins';
 
+@font-face {
+  font-family: 'Montserrat-ExtraLight';
+  src: local('Montserrat'), url('./fonts/Montserrat/static/Montserrat-ExtraLight.ttf') format('truetype');
+}
+ @font-face {
+  font-family: 'Montserrat-Bold';
+  src: local('Montserrat'), url('./fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('./fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+
+body {
+  font-family: 'Montserrat' , Inter, Arial; 
+}
+
 .App {
-  background-color: $theme-ligth-gray; 
+  background-color: $theme-ligth-gray;  
 }
 .container {
   max-width: 90%;
@@ -15,27 +33,23 @@
 
 .flex-container {
   width: 95%;
-  flex-direction: row;
-  flex-basis: 22%;
+  flex-direction: row; 
   justify-content: space-between;
-  align-items: stretch; 
+  // align-items: stretch; 
   display: flex;
+  margin-bottom: 16px;
 }
  
 .flex-container-1 {
   height: 60%;
   flex-direction: column;
-  flex-basis: 62%;
+  flex-basis: 70%;
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 1px;
   margin-bottom: 5px;
-  display: flex;
+  display: flex; 
 }
 
-.radio-select-instance-1 {
-  width: 100%;
-  flex-basis: 49%;
-}
  
  

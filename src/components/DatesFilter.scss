@@ -18,7 +18,7 @@
 .btn-group button{
   color: $theme-blue; 
   background-color: white; 
-  border: none;
+border: 1px solid white;
   border-radius: $border-radius;
   cursor: pointer;
   font-size: 0.85rem; 
@@ -27,7 +27,7 @@
   margin: 0 8px;
 }
 .btn-group button:hover {
-  background-color: $theme-ligth-gray;
+border: 1px solid $theme-gray; 
 }
 
 .btn-group  .active {
