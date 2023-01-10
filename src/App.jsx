@@ -12,6 +12,7 @@ import SaleCard from "./components/SaleCard";
 import SalesTable from "./components/SalesTable";
 import Nav from "./components/Nav";
 import DatesFilter from "./components/DatesFilter";
+import moment from "moment";
 
 // Consts
 const navItems = [
@@ -40,11 +41,11 @@ const paymentsData = {
   payments: [
     {
       payId: "GZEN2378257V2",
-      payAmount: 25000,
+      payAmount: 48000,
       payCard: "2376 2375 2373 2373",
       payStatus: "accepted",
       payFee: -5500,
-      payDate: "2023-01-06T03:44:51+0000",
+      payDate: moment().toISOString(),
       payMethod: "visa",
     },
     {
