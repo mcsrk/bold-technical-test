@@ -3,8 +3,7 @@
 .payments-table {
   border-collapse: collapse;
   margin: 0 0 25px 0;
-  font-size: 0.9em;
-  font-family: sans-serif;
+  font-size: 0.9em; 
   min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
@@ -12,7 +11,8 @@
   background-color: white;
   color: $theme-blue;
   text-align: left; 
-  border-radius: 40px;
+  border-radius: 40px; 
+  font-family: "Montserrat-ExtraLight", "Montserrat"  , Inter, Arial;
 }
 .payments-table th,
 .payments-table td {
@@ -34,8 +34,7 @@
   color: #969696;
   flex-direction: column;
   justify-content: space-between;
-  align-items: stretch;
-  font-family: Inter, Arial;
+  align-items: stretch; 
   font-size: 1rem;
   font-weight: 400;
   line-height: 27px;

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 
 // Styles
 import "./SalesTable.scss";
@@ -6,13 +6,18 @@ import "./SalesTable.scss";
 // Components
 import CustomRow from "./CustomRow";
 import TableName from "./TableName";
+import { sortObjsByDate } from "../utils/utils";
 
-const SalesTable = (props) => {
-  const { data } = props;
+const SalesTable = ({ data }) => {
+  const [sortedData, setSortedData] = React.useState(data?.payments);
+
+  useEffect(() => {
+    setSortedData(sortObjsByDate(data?.payments, "payDate"));
+  }, [data]);
 
   return (
     <div className={`sales-table`}>
-      <TableName {...props} />
+      <TableName data={data} />
 
       <table className="payments-table">
         <thead>
@@ -25,12 +30,9 @@ const SalesTable = (props) => {
           </tr>
         </thead>
         <tbody>
-          {data.payments.map((item) => (
+          {sortedData.map((item) => (
             <CustomRow key={item.payId} item={item} />
           ))}
-          {/* <CustomRow {...props.customRow} />
-          <CustomRow {...props.customRow2} />
-          <CustomRow {...props.customRow1} /> */}
         </tbody>
       </table>
     </div>
