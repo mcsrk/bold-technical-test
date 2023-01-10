@@ -6,10 +6,11 @@ import "./Nav.scss";
 // Assets
 import boldLogo from "../assets/boldLogo.png";
 import { Bars3BottomRightIcon } from "@heroicons/react/20/solid";
+import { navItems } from "../utils/constants";
 
 // Consts
 
-const Nav = ({ items }) => {
+const Nav = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
@@ -31,7 +32,7 @@ const Nav = ({ items }) => {
         }
       >
         <ul>
-          {items.map((item) => (
+          {navItems.map((item) => (
             <li key={item.id}>
               <a href={item.link}>
                 {item.title} {item?.icon}

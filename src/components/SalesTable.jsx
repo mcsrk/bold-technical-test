@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 // Styles
 import "./SalesTable.scss";
@@ -10,16 +10,23 @@ import TableName from "./TableName";
 // Utils
 import { sortObjsByDate } from "../utils/utils";
 
-const SalesTable = ({ data }) => {
-  const [sortedData, setSortedData] = React.useState(data?.payments);
+const SalesTable = ({ data, tooltipFilters, tableTimePeriod }) => {
+  const [sortedData, setSortedData] = useState(data?.payments);
 
   useEffect(() => {
     setSortedData(sortObjsByDate(data?.payments, "payDate"));
   }, [data]);
 
+  useEffect(() => {
+    setSortedData(
+      data?.payments.filter((ele) => tooltipFilters.includes(ele.payTech))
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tooltipFilters]);
+
   return (
     <div className={`sales-table`}>
-      <TableName data={data} />
+      <TableName data={data} tableTimePeriod={tableTimePeriod} />
 
       <table className="payments-table">
         <thead>

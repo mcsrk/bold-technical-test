@@ -9,8 +9,11 @@ import iconInfo from "../assets/iconInfo.svg";
 // Utils
 import { formatColombianCurrency } from "../utils/utils";
 
-const SaleCard = ({ data }) => {
-  const { title, amount, date } = data;
+// Consts
+import { cardData } from "../utils/constants";
+
+const SaleCard = () => {
+  const { title, amount, date } = cardData;
   return (
     <div className="sale-card">
       <div className="card-header">

@@ -3,16 +3,23 @@ import React, { useState } from "react";
 // Styles
 import "./DatesFilter.scss";
 
-const DatesFilter = ({ items }) => {
-  const [active, setActive] = useState(items[0].key);
+// Consts
+import { dateFilters } from "../utils/constants";
 
+const DatesFilter = ({ setTableTimePeriod }) => {
+  const [active, setActive] = useState(dateFilters[0].key);
+
+  const handleClick = (key, name) => {
+    setTableTimePeriod(name);
+    setActive(key);
+  };
   return (
     <div className="btn-group">
-      {items.map(({ key, value, name }) => (
+      {dateFilters.map(({ key, value, name }) => (
         <button
           key={"button-option" + key}
           value={value}
-          onClick={() => setActive(key)}
+          onClick={() => handleClick(key, name)}
           className={`${active === key && "active"}`}
         >
           <span className="button-text"> {name}</span>
