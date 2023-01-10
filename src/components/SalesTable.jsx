@@ -6,6 +6,8 @@ import "./SalesTable.scss";
 // Components
 import CustomRow from "./CustomRow";
 import TableName from "./TableName";
+
+// Utils
 import { sortObjsByDate } from "../utils/utils";
 
 const SalesTable = ({ data }) => {

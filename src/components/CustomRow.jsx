@@ -23,9 +23,9 @@ const mappePayMethods = {
 };
 
 const mappedStatuses = {
-  accepted: "Cobro aceptado",
+  accepted: "Cobro exitóso",
   pending: "Cobro pendiente",
-  failed: "Cobro fallido",
+  failed: "Cobro no realizado",
 };
 
 const CustomRow = ({ item }) => {
@@ -54,7 +54,7 @@ const CustomRow = ({ item }) => {
           src={mappePayMethods[payMethod] || logoUnknown}
           alt="logo-master-card"
         />
-        {replaceChars(payCard, 12) || "**** **** **** XXXX"}
+        {replaceChars(payCard, 12,'*') || "**** **** **** XXXX"}
       </td>
       <td className="pay-id-bold">{payId || "XXXXXXXXXX"}</td>
       <td className="amount-container">
